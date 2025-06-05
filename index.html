@@ -13,7 +13,7 @@
       align-items: center;
       min-height: 80vh;
       width: 100vw;
-      overflow-x: auto;
+      /* overflow-x: auto;  <-- HAPUS agar tidak dobel scroll */
     }
     iframe {
       border: none;
@@ -27,40 +27,7 @@
       transition: all 0.2s;
       display: block;
     }
-        footer {
-      text-align: left;
-      margin-top: 2.5em;
-      font-size: 1.08em;
-      box-shadow: none;
-      background: none;
-      padding: 0;
-      margin-left: 0;
-      max-width: 320px;
-    }
-    .footer-text {
-      margin-bottom: 0.6em;
-      color: #444;
-      font-size: 1em;
-      font-style: italic;
-    }
-    footer nav {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 0.3em;
-    }
-    footer nav a {
-      color: #2d5a90;
-      text-decoration: none;
-      transition: color 0.2s;
-      font-weight: 500;
-    }
-    footer nav a:hover {
-      color: #0d375f;
-      text-decoration: underline;
-    }
-
-    /* Loader Styles */
+    /* Loader Styles ... (tidak berubah) */
     .loader-bg {
       position: fixed;
       z-index: 9999;
@@ -104,20 +71,53 @@
         align-items: flex-start;
         min-height: unset;
         height: 90vh;
-        overflow-x: auto;
+        /* overflow-x: auto; <-- HAPUS agar scroll hanya di body */
       }
       iframe {
-        width: 120vw;
-        min-width: 800px;
+        width: 100vw;
+        /* min-width: 800px; <-- HAPUS supaya tidak lebih lebar dari layar */
         height: 90vh;
         min-height: 400px;
-        transform: scale(0.7);
+        /* transform: scale(0.7); <-- opsional, boleh dihapus jika ingin lebar penuh */
         transform-origin: top left;
         background: white;
         box-shadow: 0 2px 8px #ccc;
         border-radius: 0;
         display: block;
       }
+    }
+    /* Footer tetap */
+    footer {
+      text-align: left;
+      margin-top: 2.5em;
+      font-size: 1.08em;
+      box-shadow: none;
+      background: none;
+      padding: 0;
+      margin-left: 0;
+      max-width: 320px;
+    }
+    .footer-text {
+      margin-bottom: 0.6em;
+      color: #444;
+      font-size: 1em;
+      font-style: italic;
+    }
+    footer nav {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.3em;
+    }
+    footer nav a {
+      color: #2d5a90;
+      text-decoration: none;
+      transition: color 0.2s;
+      font-weight: 500;
+    }
+    footer nav a:hover {
+      color: #0d375f;
+      text-decoration: underline;
     }
   </style>
 </head>
