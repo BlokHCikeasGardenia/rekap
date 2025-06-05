@@ -27,6 +27,39 @@
       transition: all 0.2s;
       display: block;
     }
+        footer {
+      text-align: left;
+      margin-top: 2.5em;
+      font-size: 1.08em;
+      box-shadow: none;
+      background: none;
+      padding: 0;
+      margin-left: 0;
+      max-width: 320px;
+    }
+    .footer-text {
+      margin-bottom: 0.6em;
+      color: #444;
+      font-size: 1em;
+      font-style: italic;
+    }
+    footer nav {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.3em;
+    }
+    footer nav a {
+      color: #2d5a90;
+      text-decoration: none;
+      transition: color 0.2s;
+      font-weight: 500;
+    }
+    footer nav a:hover {
+      color: #0d375f;
+      text-decoration: underline;
+    }
+
     /* Loader Styles */
     .loader-bg {
       position: fixed;
@@ -122,5 +155,21 @@
       hideLoader();
     }
   </script>
+    <footer>
+    <div class="footer-text">
+      Mau lihat data yang lain? klik link di bawah ini ya...
+    </div>
+    <nav>
+      <a href="https://blokhcikeasgardenia.github.io/home/">Beranda</a>
+      <a href="https://blokhcikeasgardenia.github.io/saldo/">Saldo</a>
+      <a href="https://blokhcikeasgardenia.github.io/rekap/">Rekap</a>
+      <a href="https://blokhcikeasgardenia.github.io/dataipl/">Data IPL</a>
+      <a href="https://blokhcikeasgardenia.github.io/dataair/">Data Air</a>
+      <a href="https://blokhcikeasgardenia.github.io/dataaula/">Data Aula</a>
+      <a href="https://blokhcikeasgardenia.github.io/datalainnya/">Data Lainnya</a>
+      <a href="https://blokhcikeasgardenia.github.io/pemasukan/">Pemasukan</a>
+      <a href="https://blokhcikeasgardenia.github.io/pengeluaran/">Pengeluaran</a>
+    </nav>
+  </footer>
 </body>
 </html>
