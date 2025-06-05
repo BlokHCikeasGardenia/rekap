@@ -13,21 +13,22 @@
       align-items: center;
       min-height: 80vh;
       width: 100vw;
-      /* overflow-x: auto;  <-- HAPUS agar tidak dobel scroll */
     }
     iframe {
       border: none;
-      width: 95vw;
-      max-width: 1100px;
-      height: 50vh;
+      width: 125vw;
+      max-width: none;
+      height: 62.5vh;
       background: white;
       box-shadow: 0 2px 16px #ccc;
       border-radius: 8px;
-      min-height: 400px;
+      min-height: 320px;
       transition: all 0.2s;
       display: block;
+      transform: scale(0.8);
+      transform-origin: top left;
     }
-    /* Loader Styles ... (tidak berubah) */
+    /* Loader Styles */
     .loader-bg {
       position: fixed;
       z-index: 9999;
@@ -71,14 +72,13 @@
         align-items: flex-start;
         min-height: unset;
         height: 90vh;
-        /* overflow-x: auto; <-- HAPUS agar scroll hanya di body */
       }
       iframe {
-        width: 100vw;
-        /* min-width: 800px; <-- HAPUS supaya tidak lebih lebar dari layar */
+        width: 170vw;
+        min-width: 800px;
         height: 90vh;
         min-height: 400px;
-        /* transform: scale(0.7); <-- opsional, boleh dihapus jika ingin lebar penuh */
+        transform: scale(0.6);
         transform-origin: top left;
         background: white;
         box-shadow: 0 2px 8px #ccc;
@@ -149,13 +149,12 @@
     const iframe = document.getElementById('rekap-iframe');
     if (iframe) {
       iframe.addEventListener('load', hideLoader);
-      // Jika iframe gagal load dalam 10 detik, hilangkan loader agar tidak menggantung
       setTimeout(hideLoader, 10000);
     } else {
       hideLoader();
     }
   </script>
-    <footer>
+  <footer>
     <div class="footer-text">
       Mau lihat data yang lain? klik link di bawah ini ya...
     </div>
