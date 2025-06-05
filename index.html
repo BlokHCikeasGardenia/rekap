@@ -2,17 +2,18 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Rekap Keuangan</title>
+  <title>Data Google Sheet</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body { font-family: Arial, sans-serif; background: #f7f7f7; margin: 0; }
-    h2 { text-align: center; margin: 24px 0 16px; color: #333; font-size: 1.2rem; }
+    h2 { text-align: center; margin: 24px 0 16px; color: #333; }
     .iframe-container {
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 80vh;
       width: 100vw;
+      overflow-x: auto;
     }
     iframe {
       border: none;
@@ -23,21 +24,34 @@
       box-shadow: 0 2px 16px #ccc;
       border-radius: 8px;
       min-height: 400px;
+      transition: all 0.2s;
     }
     @media (max-width: 600px) {
-      html, body { font-size: 13px; }
-      h2 { font-size: 1rem; }
-      iframe { width: 100vw; height: 55vh; border-radius: 0; }
-    }
-    @media (max-width: 400px) {
-      html, body { font-size: 12px; }
-      h2 { font-size: 0.93rem; }
-      iframe { height: 45vh; }
+      .iframe-container {
+        justify-content: flex-start;
+        align-items: flex-start;
+        min-height: unset;
+        height: 60vh;
+        overflow-x: auto;
+      }
+      iframe {
+        width: 120vw;
+        min-width: 800px;
+        height: 60vh;
+        min-height: 400px;
+        transform: scale(0.7);
+        transform-origin: top left;
+        /* Tambahan agar tidak muncul scroll horizontal di dalam iframe */
+        background: white;
+        box-shadow: 0 2px 8px #ccc;
+        border-radius: 0;
+        display: block;
+      }
     }
   </style>
 </head>
 <body>
-  <h2>Rekap Keuangan</h2>
+  <h2>Data Google Sheet</h2>
   <div class="iframe-container">
     <iframe 
       src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRQBSWp7dBKus6wO8G-vBtSW9ZpKlRbmNLbXsaWQZeaQU_ZEY9p9EujIGTyIPVzb5cgVTlq9d0Lf29P/pubhtml?gid=1821037183&amp;single=true"
